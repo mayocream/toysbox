@@ -1,0 +1,11 @@
+prometheus:
+  configs:
+  - name: integrations
+    remote_write:
+    - basic_auth:
+        password: ${GCLOUD_API_KEY:}
+        username: ${GCLOUD_PROM_USERNAME:}
+      url: ${GCLOUD_PROM_PUSH_URL:https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push}
+  global:
+    scrape_interval: 15s
+  wal_directory: /tmp/grafana-agent-wal
