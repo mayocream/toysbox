@@ -9,7 +9,7 @@ curl -fsL "${DEB_URL}" -o /tmp/telegraf.deb || fatal 'Failed to download package
 sudo dpkg -i /tmp/telegraf.deb
 rm /tmp/telegraf.deb
 
-cat <<EOF | sudo tee /etc/telegraf.conf
+cat <<EOF | sudo tee /etc/telegraf/telegraf.conf
 [global_tags]
 
 [agent]
