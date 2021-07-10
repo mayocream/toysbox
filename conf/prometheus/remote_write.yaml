@@ -1,0 +1,20 @@
+remote_write:
+  url: <URL>
+  # # Optional `Authorization` header configuration.
+  # authorization:
+  #   # Sets the authentication type.
+  #   [ type: <string> | default: Bearer ]
+  #   # Sets the credentials. It is mutually exclusive with
+  #   # `credentials_file`.
+  #   [ credentials: <secret> ]
+  #   # Sets the credentials to the credentials read from the configured file.
+  #   # It is mutually exclusive with `credentials`.
+  #   [ credentials_file: <filename> ]
+
+  # # Optionally configures AWS's Signature Verification 4 signing process to
+  # # sign requests. Cannot be set at the same time as basic_auth, authorization, or oauth2.
+  # # To use the default credentials from the AWS SDK, use `sigv4: {}`.
+  # sigv4:
+  #   region: <string>
+  #   access_key: <string>
+  #   secret_key: <secret>

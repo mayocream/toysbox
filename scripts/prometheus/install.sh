@@ -55,6 +55,7 @@ EOF
 cat <<EOF | sudo tee /etc/prometheus/prometheus.yml
 global:
   scrape_interval: 15s
+  # external_labels:
 
 scrape_configs:
   - job_name: 'prometheus'
