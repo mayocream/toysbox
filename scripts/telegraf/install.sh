@@ -28,6 +28,18 @@ cat <<EOF | sudo tee /etc/telegraf/telegraf.conf
   omit_hostname = false
 EOF
 
+sudo wget -O /etc/telegraf/telegraf.d/mysql.conf.example \ 
+  https://raw.githubusercontent.com/mayocream/toysbox/master/conf/telegraf/mysql.conf
+
+sudo wget -O /etc/telegraf/telegraf.d/redis.conf.example \ 
+  https://raw.githubusercontent.com/mayocream/toysbox/master/conf/telegraf/redis.conf
+
+sudo wget -O /etc/telegraf/telegraf.d/prometheus.conf.example \ 
+  https://raw.githubusercontent.com/mayocream/toysbox/master/conf/telegraf/prometheus.conf
+
+sudo wget -O /etc/telegraf/telegraf.d/system.conf.example \ 
+  https://raw.githubusercontent.com/mayocream/toysbox/master/conf/telegraf/system.conf
+
 sudo systemctl enable telegraf
 
 echo "--- Edit telegraf env, run:"
